@@ -1,0 +1,405 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*.before,
+*.after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    font-family: "Dosis", sans-serif;
+    line-height: 30px;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* ------------------------------- */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header {
+    background: url("img/pr3.jpg") 0 0 / cover no-repeat;
+    height: 500px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.header__menu {
+    padding: 20px 0 0 0;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+}
+.menu a {
+    position: relative;
+}
+.menu a::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    left: 50%;
+    transition: 2s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+}
+.menu a:hover::after {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: 1s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+}
+.header__img {
+    position: relative;
+    left: 0;
+    animation-name: menu;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+.header__img:hover {
+    animation-name: menu2;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+}
+@keyframes menu {
+    0% {
+        transform: scale(1, 1);
+    }
+    20% {
+        transform: scale(-1, 1);
+    }
+    40% {
+        transform: scale(1.3, 1.3);
+    }
+    60% {
+        transform: scale(0.7, 0.7);
+    }
+    80% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@keyframes menu2 {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+.header__menu li {
+    margin: 0 20px;
+}
+.header__menu img {
+    max-width: 150px;
+}
+.header__menu a {
+    color: #fff;
+}
+.about {
+    padding: 10% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f7f7f7;
+}
+.about .text {
+    text-align: center;
+}
+.icon {
+    max-width: 70px;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+}
+.text {
+    padding: 10px 20px;
+    text-align: justify;
+}
+.content {
+    display: flex;
+}
+.work__img1 {
+    width: 60%;
+}
+.work__about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+.a1 {
+    width: 40%;
+}
+.work-2 .content {
+    flex-direction: row-reverse;
+}
+.work__img3 {
+    width: 35%;
+}
+.a2 {
+    width: 30%;
+}
+.italic {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.img-mini {
+    display: flex;
+    width: 50%;
+}
+.img-mid {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.img-b {
+    width: 20%;
+}
+
+.shop {
+    background: #282f35;
+    padding: 5% 0;
+}
+.shop a {
+    border: 0.5px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 20px;
+}
+.shop a:hover {
+    background: #3a4853;
+}
+.shop a:active {
+    background: #3a4853;
+    transform: translate3d(1px, 1px, 30px);
+}
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0 10%;
+}
+.email__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.email__btn {
+    padding: 0 30px;
+    margin: 5px 5px;
+    height: 50px;
+}
+.email__btn:active {
+    background: #c6c6c6;
+}
+
+.email__btn:hover {
+    background: #7a7a7a;
+}
+
+.email__inp {
+    margin: 5px 5px;
+    border-top: 1px solid #3a4853;
+    height: 50px;
+    width: 30%;
+}
+.email__text {
+    margin: 20px 0;
+    color: #536472;
+    font-style: italic;
+}
+
+.footer {
+    padding: 5% 10%;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+}
+.footer__info {
+    width: 40%;
+}
+.footer__info:last-child {
+    text-align: end;
+}
+.footer__network {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__network1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.footer__network1 img {
+    height: 60%;
+    width: 60%;
+}
+.footer__italic {
+    font-style: italic;
+}
+.footer h4 {
+    font-weight: 700;
+}
+
+.form_error {
+    background-color: crimson;
+    color: black;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.error {
+    background-color: crimson;
+}
+
+@media (max-width: 767px) {
+    .header {
+        height: 300px;
+    }
+    .header__menu img {
+        padding: 10px;
+    }
+    .about {
+        padding: 5%;
+    }
+    .work__img1 {
+        width: 40%;
+    }
+    .a1 {
+        width: 60%;
+    }
+    .work__img3 {
+        width: 20%;
+    }
+    .a2 {
+        width: 60%;
+    }
+}
+@media (max-width: 602px) {
+    .header__menu {
+        padding: 5px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email__inp {
+        width: 50%;
+    }
+}
+@media (max-width: 426px) {
+    .about {
+        padding: 2%;
+    }
+    .work__img1 {
+        width: 20%;
+    }
+    .a1 {
+        width: 80%;
+    }
+    .work__img3 {
+        width: 10%;
+    }
+    .a2 {
+        width: 80%;
+    }
+    .title {
+        text-align: center;
+
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .email {
+        padding: 3% 0 5%;
+    }
+    .email__form {
+        flex-direction: column;
+    }
+    .email__inp {
+        width: 100%;
+    }
+    .form_error {
+        width: 100%;
+    }
+}
